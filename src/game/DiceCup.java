@@ -19,15 +19,6 @@ public class DiceCup {
 	public int getDie2() {
 		return die2.getValue();
 	}
-	//Method to determine if die1 and die2's values are equal.
-	public boolean getEqual() {
-		if (die1.getValue() == die2.getValue()) {
-			return true;
-		}
-		else {
-			return false;
-		}		
-	}
 	//Method to return the sum of die1 and die2	
 	public int getSum() {
 		return die1.getValue() + die2.getValue();
