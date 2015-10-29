@@ -65,7 +65,7 @@ public class Game {
 				GUI.setCar(fields - 1, player1.getName());
 				GUI.showMessage(player1.getName() + " rolled a " + dicecup.getDie1() + " and " + dicecup.getDie2());
 				
-				switch (fields - 1) {
+				switch (fields) {
 				case 2:  player1.setBalance(player1.getBalance() + 250);
 				GUI.showMessage(language.getField1());
 				break;
@@ -113,7 +113,7 @@ public class Game {
 				GUI.setCar(fields - 1, player2.getName());
 				GUI.showMessage(player2.getName() + " rolled a " + dicecup.getDie1() + " and " + dicecup.getDie2());
 				
-				switch (fields - 1) {
+				switch (fields) {
 				case 2:  player2.setBalance(player2.getBalance() + 250);
 				GUI.showMessage(language.getField1());
 				break;
