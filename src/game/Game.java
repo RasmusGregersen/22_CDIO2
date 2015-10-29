@@ -47,7 +47,8 @@ public class Game {
 				win = true;
 				GUI.showMessage(player2.getName() + " Wins!");
 			}
-			
+			//GUI.setCar(0, player1.getName());
+			//GUI.setCar(0, player2.getName());
 			// Game begins! GUI method displays 'Roll' button. 
 			GUI.getUserButtonPressed("Press to roll the dice", "Roll");
 
@@ -59,6 +60,7 @@ public class Game {
 			// If player1 just rolled, sets next turn to player2.
 			if(next == player1) {
 				next = player2; 
+				GUI.setCar(fields - 1, player1.getName());
 				switch (fields) {
 				case 2:  player1.setBalance(player1.getBalance() + 250);
 				break;
@@ -82,7 +84,6 @@ public class Game {
 				break;
 				case 12: player1.setBalance(player1.getBalance() + 650);
 				break;
-				default: break; 
 				}
 				GUI.setBalance(player1.getName(), player1.getBalance());
 				// Prints out player1's roll
@@ -93,7 +94,8 @@ public class Game {
 			// Repeats same if/else for player 2.
 			else {
 				next = player1;
-				switch (fields) {
+				GUI.setCar(fields, player2.getName());
+				switch (fields - 1) {
 				case 2:  player2.setBalance(player2.getBalance() + 250);
 				break;
 				case 3:  player2.setBalance(player2.getBalance() - 200);
@@ -116,7 +118,6 @@ public class Game {
 				break;
 				case 12: player2.setBalance(player2.getBalance() + 650);
 				break;
-				default: break; 
 				}
 				GUI.setBalance(player2.getName(), player2.getBalance());
 				GUI.showMessage(player2.getName() + " rolled a " + dicecup.getDie1() + " and " + dicecup.getDie2());
