@@ -7,9 +7,20 @@
 
 package game;
 
+
 public class Player {
 	private String name; // player name
 	private int fieldloc = 1; // field location
+	private Balance balance = new Balance();
+	
+	
+	public int getBalance() {
+		return balance.getBalance();
+	}
+	
+	public void setBalance(int i) {
+		this.setBalance(i);
+	}
 	
 	// method to return player name.
 	public String getName()	{
@@ -29,4 +40,7 @@ public class Player {
 	public void setFieldloc(int fieldloc) {
 		this.fieldloc = fieldloc;
 	}
+	
+	
+	
 }
