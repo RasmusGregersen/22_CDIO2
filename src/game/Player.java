@@ -18,7 +18,7 @@ public class Player {
 	}
 	
 	public void setBalance(int i) {
-		this.setBalance(i);
+		balance.setBalance(i);
 	}
 	
 	// method to return player name.
