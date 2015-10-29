@@ -55,11 +55,12 @@ public class Game {
 			// Calls the method for a new roll, and displays it in the GUI
 			dicecup.newRoll();
 			GUI.setDice(dicecup.getDie1(), dicecup.getDie2());
-			fields = dicecup.getSum();
 			
 			// If player1 just rolled, sets next turn to player2.
 			if(next == player1) {
-				next = player2; 
+				next = player2;
+				GUI.removeAllCars(player1.getName());
+				fields = dicecup.getSum();
 				GUI.setCar(fields - 1, player1.getName());
 				switch (fields) {
 				case 2:  player1.setBalance(player1.getBalance() + 250);
@@ -94,7 +95,9 @@ public class Game {
 			// Repeats same if/else for player 2.
 			else {
 				next = player1;
-				GUI.setCar(fields, player2.getName());
+				GUI.removeAllCars(player2.getName());
+				fields = dicecup.getSum();
+				GUI.setCar(fields - 1, player2.getName());
 				switch (fields - 1) {
 				case 2:  player2.setBalance(player2.getBalance() + 250);
 				break;
