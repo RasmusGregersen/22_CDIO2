@@ -2,17 +2,17 @@ package game;
 
 public class Language {
 
-	private String field1 = "You have build a tower and sold it for +250 DOLLARS";
-	private String field2 = "Your mom fell out of the bed and a caused a crater -200 DOLLARS";
-	private String field3 = "You have to  pay to enter the Palace Gates -100 DOLLARS";
-	private String field4 = "You reached the Cold Desert and have to pay for water to survive - 20 DOLLARS";
-	private String field5 = "You have charged refugees to pay you for entering your Walled City +180 DOLLARS";
+	private String field1 = "You have build a tower and sold it for +250 ";
+	private String field2 = "Your mom fell out of the bed and a caused a crater -200 ";
+	private String field3 = "You have to  pay to enter the Palace Gates -100 ";
+	private String field4 = "You reached the Cold Desert and have to pay for water to survive - 20 ";
+	private String field5 = "You have charged refugees to pay you for entering your Walled City +180 ";
 	private String field6 = "Nothing happens here... neither does anything happen to your Balance";
-	private String field7 = "It's completely dark in the Black Cave you buy a flashlight -70 DOLLARS";
-	private String field8 = "You have to pay for an overnight stay in the Mountain Huts -60 DOLLARS";
-	private String field9 = "You kill a werewolf. Once you reach the Werewolf Wall you have to pay for your kill. But you are also congratulated on your kill therefore -80 DOLLARS and an extra turn";
-	private String field10 = "You fall into The Pit and you have to pay your savior -90 DOLLARS";
-	private String field11 = "You have reached the Goldmine. You stack your pocket with +650 DOLLARS";
+	private String field7 = "It's completely dark in the Black Cave you buy a flashlight -70 ";
+	private String field8 = "You have to pay for an overnight stay in the Mountain Huts -60 ";
+	private String field9 = "You kill a werewolf. Once you reach the Werewolf Wall you have to pay for your kill. But you are also congratulated on your kill therefore -80  and an extra turn";
+	private String field10 = "You fall into The Pit and you have to pay your savior -90 ";
+	private String field11 = "You have reached the Goldmine. You stack your pocket with +650 ";
 
 
 	public String getField1()	{
