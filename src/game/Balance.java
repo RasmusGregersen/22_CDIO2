@@ -18,5 +18,6 @@ public class Balance {
 	public int getBalance()	{
 		return balance;
 	}
+	
 
 }
