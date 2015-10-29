@@ -83,10 +83,10 @@ public class Game {
 				break;
 				case 7:  player1.setBalance(player1.getBalance() + 0);
 				GUI.showMessage(language.getField6());
+				next = player1;
 				break;
 				case 8:  player1.setBalance(player1.getBalance() - 70);
 				GUI.showMessage(language.getField7());
-				next = player1;
 				break;
 				case 9:  player1.setBalance(player1.getBalance() - 60);
 				GUI.showMessage(language.getField8());
@@ -131,10 +131,10 @@ public class Game {
 				break;
 				case 7:  player2.setBalance(player2.getBalance() + 0);
 				GUI.showMessage(language.getField6());
+				next = player2;
 				break;
 				case 8:  player2.setBalance(player2.getBalance() - 70);
 				GUI.showMessage(language.getField7());
-				next = player2;
 				break;
 				case 9:  player2.setBalance(player2.getBalance() - 60);
 				GUI.showMessage(language.getField8());
