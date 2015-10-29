@@ -7,7 +7,6 @@
 
 package game;
 
-
 public class Player {
 	private String name; // player name
 	private Balance balance = new Balance();
