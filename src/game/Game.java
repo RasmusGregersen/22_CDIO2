@@ -76,6 +76,7 @@ public class Game {
 				case 7:  player1.setBalance(player1.getBalance() + 0);
 				break;
 				case 8:  player1.setBalance(player1.getBalance() - 70);
+				next = player1;
 				break;
 				case 9:  player1.setBalance(player1.getBalance() - 60);
 				break;
@@ -112,6 +113,7 @@ public class Game {
 				case 7:  player2.setBalance(player2.getBalance() + 0);
 				break;
 				case 8:  player2.setBalance(player2.getBalance() - 70);
+				next = player2;
 				break;
 				case 9:  player2.setBalance(player2.getBalance() - 60);
 				break;
