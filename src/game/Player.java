@@ -19,7 +19,12 @@ public class Player {
 	public void setBalance(int i) {
 		balance.setBalance(i);
 	}
-	
+	public void withdraw(int i) {
+		balance.withdraw(i);
+	}
+	public void deposit(int i) {
+		balance.deposit(i);
+	}
 	// method to return player name.
 	public String getName()	{
 		return name;
