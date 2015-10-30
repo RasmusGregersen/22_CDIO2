@@ -14,15 +14,13 @@ public class Player {
 	public int getBalance() {
 		return balance.getBalance();
 	}
-	
-	public void setBalance(int i) {
-		balance.setBalance(i);
-	}
-	public void withdraw(int i) {
+	public int withdraw(int i) {
 		balance.withdraw(i);
+		return balance.getBalance();
 	}
-	public void deposit(int i) {
+	public int deposit(int i) {
 		balance.deposit(i);
+		return balance.getBalance();
 	}
 	// method to return player name.
 	public String getName()	{
