@@ -7,15 +7,15 @@ public class TestNegativeBalance {
 	public static void main(String[] args) {
 		Balance Balance = new Balance();
 
-		Balance.setBalance(-350);
+		Balance.withdraw(1500);
 
 		System.out.println(Balance.getBalance());
 		
-		Balance.setBalance(50050);
+		Balance.deposit(50050);
 		
 		System.out.println(Balance.getBalance());
 		
-		Balance.setBalance(2000);
+		Balance.deposit(1000);
 		
 		System.out.println(Balance.getBalance());
 			
