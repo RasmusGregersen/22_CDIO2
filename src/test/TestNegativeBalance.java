@@ -11,7 +11,7 @@ public class TestNegativeBalance {
 		// Deposit test 10 times with random numbers
 		for (int i=0; i < 10; i++)
 		{
-			int dep = (int)Math.ceil(Math.random()*10000);
+			int dep = (int)Math.ceil(Math.random()*5000);
 			Balance.withdraw(3000);
 			Balance.getBalance();
 			System.out.println("Balance reset to 0!");
@@ -23,7 +23,7 @@ public class TestNegativeBalance {
 		// Withdraw test 10 times with random numbers
 		for (int i=0; i < 10; i++)
 		{
-			int wit = (int)Math.ceil(Math.random()*10000);
+			int wit = (int)Math.ceil(Math.random()*5000);
 			Balance.deposit(3000);
 			Balance.getBalance();
 			System.out.println("Balance reset to 3000!");
