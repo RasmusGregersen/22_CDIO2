@@ -11,7 +11,6 @@ public class Player {
 	private String name; // player name
 	private Balance balance = new Balance();
 	
-	
 	public int getBalance() {
 		return balance.getBalance();
 	}

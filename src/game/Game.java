@@ -40,10 +40,23 @@ public class Game {
 //		car2.typeRacecar();
 //		car2.patternDotted();
 //		car2.build();		
+		String name1 = GUI.getUserString("Please type player1's name: ");
+		String name2 = GUI.getUserString("Please type player2's name: ");
+		boolean Continue = false;
 		
+		while (Continue == false) {
+			if (name1.length() < 1 || name1.length() > 15 || name1.indexOf(" ") == 0)
+				name1 = GUI.getUserString("Invalid name! Please type player1's name: ");	
+			else if (name2.length() < 1 || name2.length() > 15 || name2.indexOf(" ") == 0)
+				name2 = GUI.getUserString("Invalid name! Please type player2's name: ");
+			else if (name1.equals(name2))
+				name2 = GUI.getUserString("You cannot take player1's name! Choose a new one: ");
+			else
+				Continue = true;
+		}
 		// set player names from GUI input.
-		player1.setName(GUI.getUserString("Please type player1's name: "));
-		player2.setName(GUI.getUserString("Please type player2's name: "));
+		player1.setName(name1);
+		player2.setName(name2);
 
 		// add players to the GUI.
 		GUI.addPlayer(player1.getName(), player1.getBalance());
