@@ -20,4 +20,9 @@ public class Balance {
 
 		return balance;
 	}
+	
+	public void setBalance(int balance) {
+		
+		this.balance = balance;
+	}
 }
