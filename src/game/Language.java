@@ -2,6 +2,7 @@ package game;
 
 public class Language {
 
+	private String invalid = "Invalid name! Please type name "; 
 	private String field1 = "You have build a tower and sold it for +250";
 	private String field2 = "Your mom fell out of the bed and a caused a crater -200";
 	private String field3 = "You have to  pay to enter the Palace Gates -100";

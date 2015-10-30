@@ -4,9 +4,6 @@ public class Balance {
 
 	private int balance = 1000;
 
-	public void setBalance(int balance) {
-		this.balance = balance;
-	}
 	public void withdraw(int balance) {
 		this.balance = this.balance - balance;
 	}
@@ -15,11 +12,12 @@ public class Balance {
 
 	}
 	public int getBalance()	{
+
 		if (balance>3000)
-			setBalance(3000);
+			balance = 3000;
 
 		else if (balance<0)
-			setBalance(0);
+			balance = 0;
 
 		return balance;
 	}
