@@ -73,11 +73,13 @@ public class Game {
 			if (player1.getBalance() == 3000) {
 				GUI.showMessage(player1.getName() + " Wins!");
 				win = true;
+				break;
 				
 			}	
 			else if (player2.getBalance() == 3000) {
 				GUI.showMessage(player2.getName() + " Wins!");
-				win = true;	
+				win = true;
+				break;
 			}
 			//GUI.setCar(0, player1.getName());
 			//GUI.setCar(0, player2.getName());
