@@ -20,4 +20,8 @@ public class Die {
 	public void newRoll() {
 		eye = (int) Math.ceil(Math.random()*6);
 	}
+	@Override
+	public String toString() {
+		return "Die [eye=" + eye + "]";
+	}
 }

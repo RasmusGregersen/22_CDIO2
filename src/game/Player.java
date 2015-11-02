@@ -30,5 +30,10 @@ public class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Override
+	public String toString() {
+		return "##############################\nPlayer [name=" + name + ", balance=" + balance + "]\n##############################";
+		//return "Player [name=" + name + ", balance=" + balance + "]";
+	}
 	
 }

@@ -33,13 +33,14 @@ public class Game {
 			.patternDotted()
 			.build();
 		
+		
 		Car car2 = new Car.Builder() // chaining
 				.primaryColor(Color.CYAN)
 				.secondaryColor(Color.BLACK)
 				.typeRacecar()
 				.patternDotted()
 				.build();
-				
+		
 		
 		String name1 = GUI.getUserString(language.getPlayer1());
 		String name2 = GUI.getUserString(language.getPlayer2());
@@ -58,7 +59,7 @@ public class Game {
 		// set player names from GUI input.
 		player1.setName(name1);
 		player2.setName(name2);
-
+		
 		// add players to the GUI.
 		GUI.addPlayer(player1.getName(), player1.getBalance(), car1 );
 		GUI.addPlayer(player2.getName(), player2.getBalance(), car2 );

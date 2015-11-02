@@ -28,4 +28,8 @@ public class DiceCup {
 		die1.newRoll();
 		die2.newRoll();
 	}
+	@Override
+	public String toString() {
+		return "DiceCup [" + (die1 != null ? "die1=" + die1 + ", " : "") + (die2 != null ? "die2=" + die2 : "") + "]";
+	}
 }
