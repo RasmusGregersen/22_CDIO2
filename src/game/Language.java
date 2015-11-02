@@ -1,8 +1,17 @@
 package game;
 
 public class Language {
-
-	private String invalid = "Invalid name! Please type name "; 
+	
+	private String player1 = "Please type player 1's name: "; 
+	private String player2 = "Please type player 2's name: "; 
+	private String invalid1 = "Invalid name! Please type player 1's name: "; 
+	private String invalid2 = "Invalid name! Please type player 2's name: "; 
+	private String notEqual = "You cannot take player1's name! Choose a new one: "; 
+	private String win = "Wins! "; 
+	private String rolldice = "Press to roll the dice"; 
+	private String roll = " Roll" ; 
+	private String rolleda = " rolled : " ; 
+	private String and = " and " ; 
 	private String field1 = "You have build a tower and sold it for +250";
 	private String field2 = "Your mom fell out of the bed and a caused a crater -200";
 	private String field3 = "You have to  pay to enter the Palace Gates -100";
@@ -15,7 +24,40 @@ public class Language {
 	private String field10 = "You fall into The Pit and you have to pay your savior -90";
 	private String field11 = "You have reached the Goldmine. You stack your pocket with +650";
 
-
+	public String getPlayer1()	{
+		return player1;
+	}
+	public String getPlayer2()	{
+		return player2;
+	}
+	
+	public String getInvalid1()	{
+		return invalid1;
+	}
+	public String getInvalid2()	{
+		return invalid2;
+	}
+	
+	public String getnotEqual()	{
+		return notEqual;
+	}
+	public String getWin()	{
+		return win;
+	}
+	public String getrollDice()	{
+		return rolldice;
+	}
+	public String getRoll()	{
+		return roll;
+	}
+	public String getRolleda()	{
+		return rolleda;
+	}
+	public String getAnd()	{
+		return and;
+	}
+	
+	
 	public String getField1()	{
 		return field1;
 	}

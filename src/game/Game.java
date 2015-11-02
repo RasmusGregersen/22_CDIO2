@@ -40,17 +40,17 @@ public class Game {
 //		car2.typeRacecar();
 //		car2.patternDotted();
 //		car2.build();		
-		String name1 = GUI.getUserString("Please type player1's name: ");
-		String name2 = GUI.getUserString("Please type player2's name: ");
+		String name1 = GUI.getUserString(language.getPlayer1());
+		String name2 = GUI.getUserString(language.getPlayer2());
 		boolean Continue = false;
 		
 		while (Continue == false) {
 			if (name1.length() < 1 || name1.length() > 15 || name1.indexOf(" ") == 0)
-				name1 = GUI.getUserString("Invalid name! Please type player1's name: ");	
+				name1 = GUI.getUserString(language.getInvalid1());	
 			else if (name2.length() < 1 || name2.length() > 15 || name2.indexOf(" ") == 0)
-				name2 = GUI.getUserString("Invalid name! Please type player2's name: ");
+				name2 = GUI.getUserString(language.getInvalid2());
 			else if (name1.equals(name2))
-				name2 = GUI.getUserString("You cannot take player1's name! Choose a new one: ");
+				name2 = GUI.getUserString(language.getnotEqual());
 			else
 				Continue = true;
 		}
@@ -71,20 +71,20 @@ public class Game {
 		{
 			// The end! Congratulates the winner!
 			if (player1.getBalance() == 3000) {
-				GUI.showMessage(player1.getName() + " Wins!");
+				GUI.showMessage(player1.getName() + language.getWin());
 				win = true;
 				break;
 				
 			}	
 			else if (player2.getBalance() == 3000) {
-				GUI.showMessage(player2.getName() + " Wins!");
+				GUI.showMessage(player2.getName() + language.getWin());
 				win = true;
 				break;
 			}
 			//GUI.setCar(0, player1.getName());
 			//GUI.setCar(0, player2.getName());
 			// Game begins! GUI method displays 'Roll' button. 
-			GUI.getUserButtonPressed("Press to roll the dice", "Roll");
+			GUI.getUserButtonPressed(language.getrollDice(), language.getRoll());
 
 			// Calls the method for a new roll, and displays it in the GUI
 			dicecup.newRoll();
@@ -96,7 +96,7 @@ public class Game {
 				GUI.removeAllCars(player1.getName());
 				fields = dicecup.getSum();
 				GUI.setCar(fields - 1, player1.getName());
-				GUI.showMessage(player1.getName() + " rolled a " + dicecup.getDie1() + " and " + dicecup.getDie2());
+				GUI.showMessage(player1.getName() + language.getRolleda() + dicecup.getDie1() + language.getAnd() + dicecup.getDie2());
 				
 				switch (fields) {
 				case 2:  player1.deposit(250);
@@ -144,7 +144,7 @@ public class Game {
 				GUI.removeAllCars(player2.getName());
 				fields = dicecup.getSum();
 				GUI.setCar(fields - 1, player2.getName());
-				GUI.showMessage(player2.getName() + " rolled a " + dicecup.getDie1() + " and " + dicecup.getDie2());
+				GUI.showMessage(player2.getName() + language.getRolleda() + dicecup.getDie1() + language.getAnd() + dicecup.getDie2());
 				
 				switch (fields) {
 				case 2:  player2.deposit(250);
