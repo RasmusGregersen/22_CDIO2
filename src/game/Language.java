@@ -1,7 +1,7 @@
 package game;
 
 public class Language {
-	
+
 	private String player1 = "Please type player 1's name: "; 
 	private String player2 = "Please type player 2's name: "; 
 	private String invalid1 = "Invalid name! Please type player 1's name: "; 
@@ -30,14 +30,12 @@ public class Language {
 	public String getPlayer2()	{
 		return player2;
 	}
-	
 	public String getInvalid1()	{
 		return invalid1;
 	}
 	public String getInvalid2()	{
 		return invalid2;
 	}
-	
 	public String getnotEqual()	{
 		return notEqual;
 	}
@@ -56,8 +54,6 @@ public class Language {
 	public String getAnd()	{
 		return and;
 	}
-	
-	
 	public String getField1()	{
 		return field1;
 	}
@@ -91,5 +87,5 @@ public class Language {
 	public String getField11()	{
 		return field11;
 	}
-	
+
 }
