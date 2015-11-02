@@ -23,23 +23,24 @@ public class Game {
 		DiceCup dicecup = new DiceCup();
 		Player player1 = new Player();
 		Player player2 = new Player();
-//		Builder car1 = new Car.Builder();
-//		Builder car2 = new Car.Builder();
 		Language language = new Language();
 		int fields = 0;
 		
-
-//		car1.primaryColor(Color.ORANGE);
-//		car1.secondaryColor(Color.GREEN);
-//		car1.typeRacecar();
-//		car1.patternDotted();
-//		car1.build();
-//		
-//		car2.primaryColor(Color.CYAN);
-//		car2.secondaryColor(Color.PINK);
-//		car2.typeRacecar();
-//		car2.patternDotted();
-//		car2.build();		
+		Car car1 = new Car.Builder() // chaining
+			.primaryColor(Color.ORANGE)
+			.secondaryColor(Color.BLACK)
+			.typeRacecar()
+			.patternDotted()
+			.build();
+		
+		Car car2 = new Car.Builder() // chaining
+				.primaryColor(Color.CYAN)
+				.secondaryColor(Color.BLACK)
+				.typeRacecar()
+				.patternDotted()
+				.build();
+				
+		
 		String name1 = GUI.getUserString(language.getPlayer1());
 		String name2 = GUI.getUserString(language.getPlayer2());
 		boolean Continue = false;
@@ -59,8 +60,8 @@ public class Game {
 		player2.setName(name2);
 
 		// add players to the GUI.
-		GUI.addPlayer(player1.getName(), player1.getBalance());
-		GUI.addPlayer(player2.getName(), player2.getBalance());
+		GUI.addPlayer(player1.getName(), player1.getBalance(), car1 );
+		GUI.addPlayer(player2.getName(), player2.getBalance(), car2 );
 
 		// declare next turn to player1. (First turn).
 		Player next = player1;
@@ -137,7 +138,6 @@ public class Game {
 				GUI.setBalance(player1.getName(), player1.getBalance());
 				// Prints out player1's roll
 				
-
 			}
 			else {
 				next = player1;
