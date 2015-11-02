@@ -26,6 +26,7 @@ public class Game {
 		Language language = new Language();
 		int fields = 0;
 		
+		
 		Car car1 = new Car.Builder() // chaining
 			.primaryColor(Color.ORANGE)
 			.secondaryColor(Color.BLACK)
@@ -83,8 +84,7 @@ public class Game {
 				win = true;
 				break;
 			}
-			//GUI.setCar(0, player1.getName());
-			//GUI.setCar(0, player2.getName());
+			
 			// Game begins! GUI method displays 'Roll' button. 
 			GUI.getUserButtonPressed(language.getrollDice(), language.getRoll());
 

@@ -20,13 +20,13 @@ public class Balance {
 
 		return balance;
 	}
-	
-	public void setBalance(int balance) {
-		
-		this.balance = balance;
-	}
-	@Override
-	public String toString() {
-		return "Balance [balance=" + balance + "]";
-	}
+
+	//	public void setBalance(int balance) {
+
+	//	this.balance = balance;
+
+@Override
+public String toString() {
+	return "Balance [balance=" + balance + "]";
+}
 }
