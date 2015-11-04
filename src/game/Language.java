@@ -6,7 +6,7 @@ public class Language {
 	private String player2 = "Please type player 2's name: "; 
 	private String invalid1 = "Invalid name! Please type player 1's name: "; 
 	private String invalid2 = "Invalid name! Please type player 2's name: "; 
-	private String notEqual = "You cannot take player1's name! Please choose a new one: "; 
+	private String notEqual = "You cannot take another players name! Please choose a new one: "; 
 	private String win = "Wins! "; 
 	private String rolldice = "Press to roll the dice"; 
 	private String roll = " Roll" ; 
