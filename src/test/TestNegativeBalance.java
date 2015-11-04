@@ -14,7 +14,7 @@ public class TestNegativeBalance {
 			int dep = (int)Math.ceil(Math.random()*5000);
 			Balance.withdraw(3000);
 			Balance.getBalance();
-			System.out.println("Balance reset to 0!");
+			System.out.println("Withdrawal test: " + (i + 1) + " - Balance reset to 0!");
 			System.out.println("Trying to deposit: " + dep);
 			Balance.deposit(dep);
 			System.out.println("Balance is now: " + Balance.getBalance());
@@ -26,7 +26,7 @@ public class TestNegativeBalance {
 			int wit = (int)Math.ceil(Math.random()*5000);
 			Balance.deposit(3000);
 			Balance.getBalance();
-			System.out.println("Balance reset to 3000!");
+			System.out.println("Deposit test: " + (i + 1) + " - Balance reset to 3000!");
 			System.out.println("Trying to withdraw: " + wit);
 			Balance.withdraw(wit);
 			System.out.println("Balance is now: " + Balance.getBalance());

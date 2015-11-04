@@ -52,7 +52,7 @@ public class Game {
 				name1 = GUI.getUserString(language.getInvalid1());	
 			else if (name2.length() < 1 || name2.length() > 15 || name2.indexOf(" ") == 0)
 				name2 = GUI.getUserString(language.getInvalid2());
-			else if (name1.equals(name2))
+			else if (name1.equalsIgnoreCase(name2))
 				name2 = GUI.getUserString(language.getnotEqual());
 			else
 				Continue = true;
