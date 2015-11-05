@@ -19,14 +19,16 @@ public class Game {
 	public static void main(String[] args) {
 
 
-		// Import of 1 dicecup class and 2 player classes.
+		// Creates new entities of our subclasses.
 		DiceCup dicecup = new DiceCup();
 		Player player1 = new Player();
 		Player player2 = new Player();
 		Language language = new Language();
+		
+		// Initialize fields variable for the game board.
 		int fields = 0;
 		
-		
+		// Creates new entity for the player cars (pieces).
 		Car car1 = new Car.Builder() // chaining
 			.primaryColor(Color.ORANGE)
 			.secondaryColor(Color.BLACK)
@@ -42,16 +44,22 @@ public class Game {
 				.patternDotted()
 				.build();
 		
-		
+		// New variables for player names, and input thru the GUI.
 		String name1 = GUI.getUserString(language.getPlayer1());
 		String name2 = GUI.getUserString(language.getPlayer2());
+		
+		// Boolean variable for while loop.
 		boolean Continue = false;
 		
+		// Checks if the playernames live up to the requirements.
 		while (Continue == false) {
+			// Player name must be between 1 and 15 characters and the first character cannot be space.
 			if (name1.length() < 1 || name1.length() > 15 || name1.indexOf(" ") == 0)
 				name1 = GUI.getUserString(language.getInvalid1());	
+			
 			else if (name2.length() < 1 || name2.length() > 15 || name2.indexOf(" ") == 0)
 				name2 = GUI.getUserString(language.getInvalid2());
+			// Player names must not be identical. (Ignores case)
 			else if (name1.equalsIgnoreCase(name2))
 				name2 = GUI.getUserString(language.getnotEqual());
 			else
@@ -68,7 +76,7 @@ public class Game {
 		// declare next turn to player1. (First turn).
 		Player next = player1;
 
-		// while loop that runs until a winner is found. (win = true).
+		// while loop that runs until a winner is found. (win == true).
 		boolean win = false;
 		while (win == false)
 		{
@@ -77,7 +85,6 @@ public class Game {
 				GUI.showMessage(player1.getName() + language.getWin());
 				win = true;
 				break;
-				
 			}	
 			else if (player2.getBalance() == 3000) {
 				GUI.showMessage(player2.getName() + language.getWin());
@@ -95,11 +102,13 @@ public class Game {
 			// If player1 just rolled, sets next turn to player2.
 			if(next == player1) {
 				next = player2;
+				// Remove all cars belonging to player1 from the board.
 				GUI.removeAllCars(player1.getName());
 				fields = dicecup.getSum();
+				// Sets the car on the board according to the diceroll
 				GUI.setCar(fields - 1, player1.getName());
 				GUI.showMessage(player1.getName() + language.getRolleda() + dicecup.getDie1() + language.getAnd() + dicecup.getDie2());
-				
+				// Switch with all game fields and the corresponding actions. 
 				switch (fields) {
 				case 2:  player1.deposit(250);
 				GUI.showMessage(language.getField1());
@@ -136,11 +145,12 @@ public class Game {
 				GUI.showMessage(language.getField11());
 				break;
 				}
+				// Updates balance in the GUI.
 				GUI.setBalance(player1.getName(), player1.getBalance());
-				// Prints out player1's roll
 				
 			}
 			else {
+				// Repeat for player 2
 				next = player1;
 				GUI.removeAllCars(player2.getName());
 				fields = dicecup.getSum();

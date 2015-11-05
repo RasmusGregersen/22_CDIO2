@@ -6,13 +6,15 @@ import game.*;
 import org.junit.Test;
 
 public class JunitTests {
-
+	
+	// Tests start balance to be 1000
 	@Test
 	public void Startbalance() {
 		Balance balance = new Balance();
 		int result = balance.getBalance();
 		assertEquals(1000, result);
-		
+	
+	// Tests withdraw method
 	}
 	@Test
 	public void Withdraw500() {
@@ -22,6 +24,7 @@ public class JunitTests {
 		assertEquals(500, result);
 	}
 	
+	// Tests withdraw method can't return less than 0
 	@Test
 	public void Withdraw5000() {
 		Balance balance = new Balance();
@@ -30,6 +33,7 @@ public class JunitTests {
 		assertEquals(0, result);
 	}
 	
+	// Tests deposit method
 	@Test
 	public void Deposit500() {
 		Balance balance = new Balance();
@@ -38,6 +42,7 @@ public class JunitTests {
 		assertEquals(1500, result);
 	}
 	
+	// Tests deposit method can't return more than 3000
 	@Test
 	public void Deposit5000() {
 		Balance balance = new Balance();
@@ -46,6 +51,7 @@ public class JunitTests {
 		assertEquals(3000, result);
 	}
 	
+	// Tests getName() method
 	@Test
 	public void StartPlayerName() {
 		Player player = new Player();
@@ -53,6 +59,7 @@ public class JunitTests {
 		assertEquals(null, result);
 	}
 	
+	// tests setName() method
 	@Test
 	public void SetPlayerName() {
 		Player player = new Player();
@@ -61,6 +68,7 @@ public class JunitTests {
 		assertEquals("Rasmus", result);
 	}
 	
+	// Tests newroll() and getters in DiceCup.
 	@Test
 	public void GetSum() {
 		DiceCup dicecup = new DiceCup();

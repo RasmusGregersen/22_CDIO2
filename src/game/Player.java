@@ -8,16 +8,18 @@
 package game;
 
 public class Player {
-	private String name; // player name
+	private String name;
 	private Balance balance = new Balance();
 	
 	public int getBalance() {
 		return balance.getBalance();
 	}
+	// Method to withdraw from the balance
 	public int withdraw(int i) {
 		balance.withdraw(i);
 		return balance.getBalance();
 	}
+	// Method to deposit from the balance
 	public int deposit(int i) {
 		balance.deposit(i);
 		return balance.getBalance();

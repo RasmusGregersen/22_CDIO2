@@ -6,11 +6,14 @@ import desktop_codebehind.Car.Builder;
 import desktop_resources.GUI;
 import game.*;
 
-
+/* Description:
+* This tests starts when the player press OK, 
+* and runs thru an entire game (without user input) 
+* and prints the average responsetime. 
+*/
 public class testresponsetime {
 
 	public static void main(String[] args) {
-		
 		GUI.showMessage("Start test!");
 		double lStartTime = System.currentTimeMillis();
 		double counter = 0;
